@@ -19,7 +19,7 @@ const SignUp = () => {
     console.log("Submitting formData:", formData); // Debugging log
 
     try {
-      const response = await fetch("http://localhost:3000/signup", {
+      const response = await fetch("https://eventexplorer-backend.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

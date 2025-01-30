@@ -9,7 +9,7 @@ const ViewEvent = () => {
   // Function to fetch events from the database
   const fetchEvents = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/events");
+      const response = await axios.get("https://eventexplorer-backend.onrender.com/api/events");
       setEvents(response.data); // Update state with fetched events
     } catch (error) {
       console.error("Error fetching events:", error);
@@ -33,7 +33,7 @@ const ViewEvent = () => {
     if (!newEvent.name || !newEvent.description || !newEvent.image) return;
 
     try {
-      const response = await axios.post("http://localhost:3000/api/events", newEvent);
+      const response = await axios.post("https://eventexplorer-backend.onrender.com/api/events", newEvent);
       setEvents([...events, response.data]); // Add new event to state
       setNewEvent({ name: "", description: "", image: "" }); // Reset form
     } catch (error) {
